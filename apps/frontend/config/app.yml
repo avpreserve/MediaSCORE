@@ -7,7 +7,7 @@ qa:
     .settings:
         base:     https://mediascoreqa.avpreserve.com
         url: https://mediascoreqa.avpreserve.com
-testing:
+dev:
     .settings:
         base:     http://mediascore.live.geekschicago.com/frontend_dev.php
         url: http://mediascore.live.geekschicago.com/index.php
