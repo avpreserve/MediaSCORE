@@ -83,7 +83,8 @@
             </div>
         </div>
 
-        <footer><img src="/images/wireframes/indiana-university-footer-logo.png" alt="Indiana University" /><a href="#">Copyright</a> ©2008 The Trustees of <a href="#">IndianaUniversity</a> | <a href="#">Copyright Complaints</a></footer>
+        <footer>
+</footer>
 
     </body>
 </html>

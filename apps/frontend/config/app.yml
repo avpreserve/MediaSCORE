@@ -1,24 +1,6 @@
-production:
-    .settings:
-        base:       https://mediascore.avpreserve.com
-        url: https://mediascore.avpreserve.com
-        
-qa:
-    .settings:
-        base:     https://mediascoreqa.avpreserve.com
-        url: https://mediascoreqa.avpreserve.com
-dev:
-    .settings:
-        base:     http://mediascore.live.geekschicago.com/frontend_dev.php
-        url: http://mediascore.live.geekschicago.com/index.php
- 
-local:
-    .settings:
-        base:     http://avp.localhost/frontend_dev.php
-        url: http://avp.localhost
-        base_path : checking/
-        
 all:
-  .settings:
-      contactUs:     contactus@indiana.edu
+    .settings:
+        base:       https://uncsfc.avpreserve.com
+        url: https://uncsfc.avpreserve.com
+        contactUs:     contactus@uncsfc.avpreserve.com
       
