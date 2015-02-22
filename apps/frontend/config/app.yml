@@ -2,5 +2,5 @@ all:
     .settings:
         base:       https://uncsfc.avpreserve.com
         url: https://uncsfc.avpreserve.com
-        contactUs:     contactus@uncsfc.avpreserve.com
+        contactUs:     support@avpreserve.com
       
