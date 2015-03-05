@@ -1,0 +1,11 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: mysql:host=localhost;dbname=mediascorepro
+      username: mediascorepro
+      password: avps@123
+
+
+
+

@@ -1,14 +1,5 @@
 <?php
 
-$serverName = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : gethostname();
-if (strpos($serverName, 'mediascore.avpreserve.com') !== FALSE)
-	define('ENVIRONMENT', 'production');
-else if (strpos($serverName, 'mediascoreqa.avpreserve.com') !== FALSE)
-	define('ENVIRONMENT', 'qa');
-else if (strpos($serverName, 'mediascore.live.geekschicago.com') !== FALSE)
-	define('ENVIRONMENT', 'testing');
-else
-	define('ENVIRONMENT', 'local');
 require_once(dirname(__FILE__) . '/../config/ProjectConfiguration.class.php');
-$configuration = ProjectConfiguration::getApplicationConfiguration('frontend', ENVIRONMENT, TRUE);
+$configuration = ProjectConfiguration::getApplicationConfiguration('frontend', 'dev', TRUE);
 sfContext::createInstance($configuration)->dispatch();

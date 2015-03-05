@@ -1,24 +1,17 @@
 production:
     .settings:
         base:       https://mediascore.avpreserve.com
-        url: https://mediascore.avpreserve.com
-        
-qa:
-    .settings:
-        base:     https://mediascoreqa.avpreserve.com
-        url: https://mediascoreqa.avpreserve.com
-testing:
-    .settings:
-        base:     http://mediascore.live.geekschicago.com/frontend_dev.php
-        url: http://mediascore.live.geekschicago.com/index.php
+        url:        https://mediascore.avpreserve.com
  
-local:
+dev:
     .settings:
         base:     http://avp.localhost/frontend_dev.php
-        url: http://avp.localhost
+        url:      http://avp.localhost
         base_path : checking/
         
 all:
   .settings:
       contactUs:     contactus@indiana.edu
+      contact:       support@indiana.edu
+      
       

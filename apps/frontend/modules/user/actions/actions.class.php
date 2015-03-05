@@ -146,7 +146,7 @@ class userActions extends sfActions {
                 $user->setUsername($user->getEmailAddress());
                 $user->save();
                 $message = Swift_Message::newInstance()
-                        ->setFrom('support@indiana.edu')
+                        ->setFrom(sfConfig::get('app_contact'))
                         ->setTo($user->getEmailAddress())
                         ->setSubject('Activate your account ' . $user->getUsername())
                         ->setBody('To Activate your account click on the following link.<br/><br/> ' . sfConfig::get('app_base') . '/sfGuardAuth/activateAccount?key=' . $key)
@@ -157,7 +157,7 @@ class userActions extends sfActions {
             } else {
                 if (!$user->getIsActive()) {
                     $message = Swift_Message::newInstance()
-                            ->setFrom('support@indiana.edu')
+                            ->setFrom(sfConfig::get('app_contact'))
                             ->setTo($user->getEmailAddress())
                             ->setSubject('Activate your account ' . $user->getUsername())
                             ->setBody('To Activate your account click on the following link.<br/><br/> ' . sfConfig::get('app_base') . '/sfGuardAuth/activateAccount?key=' . $key)
