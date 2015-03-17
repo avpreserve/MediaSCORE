@@ -107,7 +107,9 @@ class unitActions extends sfActions
 			$filterID = $db->getSearchResults($searchParams, $this->getUser()->getGuardUser());
 			$this->searchResult = array();
 			$this->html = '';
-
+                        echo '<pre>';
+                        print_r($filterID);
+                        exit;
 			if (count($filterID) > 0)
 			{
 				$this->searchResult = Doctrine_Query::Create()
