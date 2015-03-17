@@ -1,4 +1,8 @@
-
+<?php 
+@set_time_limit(0);
+@ini_set("memory_limit", "2000M"); # 3GB
+@ini_set("max_execution_time", 999999999999); # 1GB
+?>
 <style>
     .tooltip {outline:none; }
     .tooltip strong {line-height:30px;}
@@ -190,6 +194,7 @@
 		<?php
 		if (isset($searchResult) && sizeof($searchResult) > 0)
 		{
+                    
 			?>
 			<?php
 			foreach ($searchResult as $result):
@@ -261,7 +266,7 @@
 			$morethenlengthName = TRUE;
 		}
 		?>
-					<td ><a href="<?php echo $urlOnName; ?>" class="long_name_handler <?php echo $morethenlengthName ? 'tooltip' : '' ?>"><?php echo $alterName ?><span><?php echo $morethenlengthName ? $getName : ''; ?></span></a>&nbsp;&nbsp;<div class="help-text"><?php echo $text; ?></div></td>
+					<td ><a href="<?php echo $urlOnName; ?>" class="long_name_handler "><?php echo $alterName ?><span><?php echo $morethenlengthName ? $getName : ''; ?></span></a>&nbsp;&nbsp;<div class="help-text"><?php echo $text; ?></div></td>
 					<td><?php echo date('Y-d-m', strtotime($result->getCreatedAt())); ?></td>
 					<td> 
 				<?php echo '<span>' . $result->getCreator()->getName() . '</span>'; ?>
