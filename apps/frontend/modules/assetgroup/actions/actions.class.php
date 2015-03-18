@@ -42,7 +42,7 @@ class assetgroupActions extends sfActions {
                     ->where('c.parent_node_id  = ?', $collectionId);
             // apply the filters for assets group
             if ($searchInpout && trim($searchInpout) != '') {
-                $this->assets = $this->assets->andWhere('name like "%' . $searchInpout . '%"');
+                $this->assets = $this->assets->andWhere('(name like "%' . $searchInpout . '%" or inst_id like "%' . $searchInpout . '%")');
             }
             if (trim($status) != '') {
                 $this->assets = $this->assets->andWhere('status =?', $status);

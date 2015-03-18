@@ -76,7 +76,8 @@
             <input type="search" placeholder="Search all records" id="mainsearch" onkeyup="makeToken(event);"/>
             <div class="container">
 			   <a class="search-triangle" href="javascript:void(0);" onclick="$('.dropdown-container').slideToggle();
-						$('.dropdown-container').css('width', $('.search-input').width() + 26);"></a><b class="token-count"><?php echo count($searchString); ?></b>
+						$('.dropdown-container').css('width', $('.search-input').width() + 26);"></a>
+                                 <b class="token-count"><?php echo count($searchString); ?></b>
                 <a class="search-close" href="javascript:void(0);" onclick="removeAllTokenDivs();"></a>
             </div>
 

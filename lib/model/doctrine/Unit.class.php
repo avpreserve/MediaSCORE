@@ -140,15 +140,15 @@ class Unit extends BaseUnit {
             foreach ($params['string'] as $index => $string) {
                 if (!empty($string)) {
                     if ($index == 0)
-                        $where .=" (s.name LIKE '{$string}%')";
+                        $where .=" (s.name LIKE '{$string}%' OR s.inst_id LIKE '{$string}%')";
                     else
-                        $where .=" OR (s.name LIKE '{$string}%')";
+                        $where .=" OR (s.name LIKE '{$string}%' OR s.inst_id LIKE '{$string}%')";
                 }
             }
             $where .=')';
         }
         if (isset($params['s']) && !empty($params['s'])) {
-            $where .=" AND s.name LIKE '{$params['s']}%'";
+            $where .=" AND (s.name LIKE '{$params['s']}%' OR s.inst_id LIKE '{$params['s']}%')";
         }
         if (isset($params['status']) && !empty($params['status'])) {
             $where .=" AND s.status = {$params['status']}";
