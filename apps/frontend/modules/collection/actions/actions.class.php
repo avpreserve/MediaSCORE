@@ -122,7 +122,7 @@ class collectionActions extends sfActions
 
 			if ($searchInpout && trim($searchInpout) != '')
 			{
-				$this->collections = $this->collections->andWhere('c.name like "%' . $searchInpout . '%"');
+				$this->collections = $this->collections->andWhere('(c.name like "%' . $searchInpout . '%" or c.inst_id like "%' . $searchInpout . '%")');
 			}
 			if (trim($status) != '')
 			{

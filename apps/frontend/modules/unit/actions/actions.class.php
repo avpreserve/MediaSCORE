@@ -64,7 +64,9 @@ class unitActions extends sfActions {
 
             if (!empty($searchValues))
                 $this->searchString = explode(',', $searchValues);
-
+//            echo '<pre>';
+//            print_r($this->searchString);
+//            exit;
             $formatType = array();
             $storeType = array();
             $assetType = '';
@@ -308,6 +310,7 @@ class unitActions extends sfActions {
             $this->searchString = array();
             if (!empty($this->searchValues))
                 $this->searchString = explode(',', $this->searchValues);
+
 // compare search values with the arrays ($store and $type)
 
             $formatType = array();
@@ -331,12 +334,13 @@ class unitActions extends sfActions {
                 else if (isset($asset[$value]))
                     $assetType = $asset[$value];
                 else if (isset($locations[$value]))
-                    $locationString[] = $locations[$value]
-                    ;
+                    $locationString[] = $locations[$value];
                 else
                     $stringForName[] = trim($value);
             }
-
+//            echo '<pre>';
+//            print_r($this->searchString);
+//            exit;
             $searchParams = array(
                 'formats' => $formatType,
                 'store' => $storeType,
@@ -347,7 +351,7 @@ class unitActions extends sfActions {
             $db = new Unit();
             $filterID = $db->getSearchResults($searchParams, $this->getUser()->getGuardUser());
 
-            
+
 
             $this->searchResult = array();
             if (count($filterID) > 0) {
@@ -357,7 +361,7 @@ class unitActions extends sfActions {
                         ->whereIn('s.id', $filterID)
                         ->execute();
             }
-           // echo count($this->searchResult);
+            // echo count($this->searchResult);
 //            echo 'here222<pre>';
 //            print_r($filterID);
 //            exit;
@@ -498,7 +502,7 @@ class unitActions extends sfActions {
             }
 // apply filters for searching the unit
             if ($searchInpout && trim($searchInpout) != '') {
-                $this->unit = $this->unit->andWhere('u.name like "%' . $searchInpout . '%"');
+                $this->unit = $this->unit->andWhere('(u.name like "%' . $searchInpout . '%" or u.inst_id like "%' . $searchInpout . '%")');
             }
             if (trim($status) != '') {
                 $this->unit = $this->unit->andWhere('u.status = ?', $status);
