@@ -150,7 +150,7 @@ class sfGuardAuthActions extends sfActions
 				$user->save();
 
 				$message = Swift_Message::newInstance()
-				->setFrom('support@indiana.edu')
+				->setFrom(sfConfig::get('app_contact'))
 				->setTo($validateEmail[0]['email_address'])
 				->setSubject('Forgot Password Request for ' . $validateEmail[0]['username'])
 				->setBody('Your temporary new password is ' . $password)
