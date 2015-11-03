@@ -197,8 +197,8 @@
             foreach ($searchResult as $result):
                 if ($result->getType() == 1) {
                     $text = 'Unit';
-                    $urlOnName = 'test';//url_for('collection', $result);
-                    $urlonEdit = 'test';//url_for('unit/edit?id=' . $result->getId());
+                    $urlOnName = url_for('collection', $result);
+                    $urlonEdit = url_for('unit/edit?id=' . $result->getId());
                     $parentId = 0;
                     $duration = 0;//$result->getDurationRealTime($result->getId());
                 }
