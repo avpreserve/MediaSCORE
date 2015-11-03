@@ -205,10 +205,10 @@
                 if ($result->getType() == 3) {
                     $text = 'Collection';
                     if ($result) {
-                        $urlOnName = url_for('assetgroup', $result);
+                        $urlOnName =// url_for('assetgroup', $result);
                     }
 
-                    $urlonEdit = 'test';//url_for('collection/edit?id=' . $result->getId()) . '/u/' . $result->getParentNodeId();
+                    $urlonEdit = url_for('collection/edit?id=' . $result->getId()) . '/u/' . $result->getParentNodeId();
                     $context = sfContext::getInstance();
                     $user = $context->getUser()->getAttribute('view');
                     if ($user) {
