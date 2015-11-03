@@ -224,7 +224,7 @@
                     $text = 'Asset Group';
                     $urlOnName ='test';// '/assetgroup/edit/id/' . $result->getId() . '/c/' . $result->getParentNodeId();
                     $parentId = $result->getParentNodeId();
-                    $duration = $result->getDurationRealTime($result->getFormatId());
+                    $duration = 0;//$result->getDurationRealTime($result->getFormatId());
                 }
                 ?>
                 <tr>
