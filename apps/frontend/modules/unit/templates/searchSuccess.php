@@ -206,7 +206,7 @@
                     $text = 'Collection';
 					
                     if ($result) {
-                        $urlOnName = url_for('assetgroup', Doctrine_Core::getTable('Collection')->find(array($result->getId()));
+                        $urlOnName = url_for('assetgroup', Doctrine_Core::getTable('Collection')->find(array($result->getId())));
                     }
 
                     $urlonEdit = url_for('collection/edit?id=' . $result->getId()) . '/u/' . $result->getParentNodeId();
