@@ -204,9 +204,9 @@
                 }
                 if ($result->getType() == 3) {
                     $text = 'Collection';
-					echo '<pre>';print_r($result);exit;
+					
                     if ($result) {
-                        $urlOnName ='test';// url_for('assetgroup', $result);
+                        $urlOnName = url_for('assetgroup', Doctrine_Core::getTable('Collection')->find(array($result->getId()));
                     }
 
                     $urlonEdit = url_for('collection/edit?id=' . $result->getId()) . '/u/' . $result->getParentNodeId();

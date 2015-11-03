@@ -16,10 +16,7 @@ class unitActions extends sfActions {
      * @param sfWebRequest $request 
      */
     public function executeSearch(sfWebRequest $request) {
-        error_reporting(E_ALL);
-        ini_set('display_errors', 1);
-//            echo 'here';
-//            exit;
+        
 // make array of all the format types that are available
         $this->deleteMessage = $this->getUser()->getAttribute('delMsg');
         $this->AllStorageLocations = Doctrine_Query::create()->from('StorageLocation sl')->select('sl.id,sl.name')->fetchArray('name');
@@ -361,10 +358,7 @@ class unitActions extends sfActions {
                         ->whereIn('s.id', $filterID)
                         ->execute();
             }
-            // echo count($this->searchResult);
-//            echo 'here222<pre>';
-//            print_r($filterID);
-//            exit;
+            
         }
     }
 
