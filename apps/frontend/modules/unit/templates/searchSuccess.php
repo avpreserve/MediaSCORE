@@ -223,7 +223,7 @@
                 }
                 if ($result->getType() == 4) {
                     $text = 'Asset Group';
-                    $urlOnName ='test';// '/assetgroup/edit/id/' . $result->getId() . '/c/' . $result->getParentNodeId();
+                    $urlOnName ='/assetgroup/edit/id/' . $result->getId() . '/c/' . $result->getParentNodeId();
                     $parentId = $result->getParentNodeId();
                     $duration = 0;//$result->getDurationRealTime($result->getFormatId());
                 }
