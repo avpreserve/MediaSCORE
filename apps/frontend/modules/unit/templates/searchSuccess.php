@@ -204,6 +204,7 @@
                 }
                 if ($result->getType() == 3) {
                     $text = 'Collection';
+					echo '<pre>';print_r($result);exit;
                     if ($result) {
                         $urlOnName ='test';// url_for('assetgroup', $result);
                     }
