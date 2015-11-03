@@ -3,7 +3,7 @@
 @ini_set("memory_limit", "2000M"); # 3GB
 @ini_set("max_execution_time", 999999999999); # 1GB
 
-echo 'here';exit;
+
 ?>
 <style>
     .tooltip {outline:none; }
@@ -197,18 +197,18 @@ echo 'here';exit;
             foreach ($searchResult as $result):
                 if ($result->getType() == 1) {
                     $text = 'Unit';
-                    $urlOnName = url_for('collection', $result);
-                    $urlonEdit = url_for('unit/edit?id=' . $result->getId());
+                    $urlOnName = 'test';//url_for('collection', $result);
+                    $urlonEdit = 'test';//url_for('unit/edit?id=' . $result->getId());
                     $parentId = 0;
                     $duration = $result->getDurationRealTime($result->getId());
                 }
                 if ($result->getType() == 3) {
                     $text = 'Collection';
                     if ($result) {
-                        $urlOnName = url_for('assetgroup', $result);
+                        $urlOnName ='test';// url_for('assetgroup', $result);
                     }
 
-                    $urlonEdit = url_for('collection/edit?id=' . $result->getId()) . '/u/' . $result->getParentNodeId();
+                    $urlonEdit = 'test';//url_for('collection/edit?id=' . $result->getId()) . '/u/' . $result->getParentNodeId();
                     $context = sfContext::getInstance();
                     $user = $context->getUser()->getAttribute('view');
                     if ($user) {
@@ -222,7 +222,7 @@ echo 'here';exit;
                 }
                 if ($result->getType() == 4) {
                     $text = 'Asset Group';
-                    $urlOnName = '/assetgroup/edit/id/' . $result->getId() . '/c/' . $result->getParentNodeId();
+                    $urlOnName ='test';// '/assetgroup/edit/id/' . $result->getId() . '/c/' . $result->getParentNodeId();
                     $parentId = $result->getParentNodeId();
                     $duration = $result->getDurationRealTime($result->getFormatId());
                 }
