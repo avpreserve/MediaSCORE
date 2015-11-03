@@ -200,7 +200,7 @@
                     $urlOnName = url_for('collection', $result);
                     $urlonEdit = url_for('unit/edit?id=' . $result->getId());
                     $parentId = 0;
-                    $duration = 0;//$result->getDurationRealTime($result->getId());
+                    $duration = $result->getDurationRealTime($result->getId());
                 }
                 if ($result->getType() == 3) {
                     $text = 'Collection';
