@@ -179,7 +179,7 @@
                 ?>
                 <td width="50"></td>
             <?php } ?>
-            <th width="150"><span>Title</span></th>
+            <th><span>Title</span></th>
             <th><span>Created</span></th>
             <th><span>Created By</span></th>
             <th><span>Updated On</span></th>
@@ -255,7 +255,7 @@
                         $morethenlengthName = TRUE;
                     }
                     ?>
-                    <td  width="150"><a href="<?php echo $urlOnName; ?>" class="long_name_handler"><?php echo $alterName ?><span><?php echo $morethenlengthName ? $getName : ''; ?></span></a>&nbsp;&nbsp;<div class="help-text"><?php echo $text; ?></div></td>
+                    <td><a href="<?php echo $urlOnName; ?>" class="long_name_handler"><?php echo $alterName ?><span><?php // echo $morethenlengthName ? $getName : ''; ?></span></a>&nbsp;&nbsp;<div class="help-text"><?php echo $text; ?></div></td>
                     <td><?php echo date('Y-d-m', strtotime($result->getCreatedAt())); ?></td>
                     <td> 
                         <?php echo '<span>' . $result->getCreator()->getName() . '</span>'; ?>
