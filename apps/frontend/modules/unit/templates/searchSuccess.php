@@ -205,7 +205,7 @@
                 if ($result->getType() == 3) {
                     $text = 'Collection';
                     if ($result) {
-                        $urlOnName ='test';// url_for('assetgroup', $result);
+                        $urlOnName = url_for('assetgroup', $result);
                     }
 
                     $urlonEdit = 'test';//url_for('collection/edit?id=' . $result->getId()) . '/u/' . $result->getParentNodeId();
