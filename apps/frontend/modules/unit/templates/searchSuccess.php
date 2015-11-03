@@ -2,6 +2,8 @@
 @set_time_limit(0);
 @ini_set("memory_limit", "2000M"); # 3GB
 @ini_set("max_execution_time", 999999999999); # 1GB
+
+echo 'here';exit;
 ?>
 <style>
     .tooltip {outline:none; }
