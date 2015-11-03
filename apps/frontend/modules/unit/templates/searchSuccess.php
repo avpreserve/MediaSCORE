@@ -200,7 +200,7 @@
                     $urlOnName = 'test';//url_for('collection', $result);
                     $urlonEdit = 'test';//url_for('unit/edit?id=' . $result->getId());
                     $parentId = 0;
-                    $duration = $result->getDurationRealTime($result->getId());
+                    $duration = 0;//$result->getDurationRealTime($result->getId());
                 }
                 if ($result->getType() == 3) {
                     $text = 'Collection';
@@ -218,7 +218,7 @@
                         }
                     }
                     $parentId = $result->getParentNodeId();
-                    $duration = $result->getDurationRealTime($result->getId());
+                    $duration = 0;//$result->getDurationRealTime($result->getId());
                 }
                 if ($result->getType() == 4) {
                     $text = 'Asset Group';
