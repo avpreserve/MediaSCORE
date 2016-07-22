@@ -57,8 +57,7 @@
                         $("#collection_parent_node_id").bind("multiselectclick", function(event, ui){
                             var array_of_checked_values = $("#collection_parent_node_id").multiselect("getChecked").map(function(){
                                 return this.value;	
-                            }).get();
-                                                                            
+                            }).get();                                        
                             getStorage(array_of_checked_values);
                         });
                     </script>
